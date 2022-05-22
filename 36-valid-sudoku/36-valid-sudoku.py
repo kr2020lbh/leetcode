@@ -18,18 +18,17 @@ class Solution:
                 else:
                     col.add(ele)
                     
-        for i in range(3):
-            for j in range(3):
-                r,c = i*3,j*3
-                block = set()
+        for i in range(0,9,3):
+            for j in range(0,9,3):
+                square = set()
+                print(i,j)
                 for _i in range(3):
                     for _j in range(3):
-                        ele = board[r+_i][c+_j]
-                        
-                        if ele != '.' and (ele in block):
+                        ele = board[i+_i][j+_j]
+                        if ele != '.' and (ele in square):
                             return False
                         else:
-                            block.add(ele)
+                            square.add(ele)
         return True
             
         
