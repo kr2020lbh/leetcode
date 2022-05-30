@@ -11,7 +11,6 @@ class Solution:
             nodes.append(node)
             node = node.next
         m = len(nodes) - n
-        print(m)
         if len(nodes) == 1:
             return
         if m == 0:
