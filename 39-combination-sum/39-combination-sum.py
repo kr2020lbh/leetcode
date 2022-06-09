@@ -14,4 +14,5 @@ class Solution:
             return
         
         for i in range(startIdx,len(candidates)):
-            self.dfs(i,curList  + [candidates[i]],candidates,target-candidates[i],answer)
+            if target-candidates[i] >= 0:
+                self.dfs(i,curList  + [candidates[i]],candidates,target-candidates[i],answer)
