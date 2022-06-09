@@ -14,6 +14,4 @@ class Solution:
             return
         
         for i in range(startIdx,len(candidates)):
-            curList.append(candidates[i])
-            self.dfs(i,curList,candidates,target-candidates[i],answer)
-            curList.pop()
+            self.dfs(i,curList  + [candidates[i]],candidates,target-candidates[i],answer)
